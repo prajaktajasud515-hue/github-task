@@ -1,0 +1,19 @@
+name: Cron Job Every 5 Minutes
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  cron-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start Job
+        run: echo "Cron job started"
+
+      - name: Show Current Date and Time
+        run: date
+
+      - name: Complete Job
+        run: echo "Cron job completed successfully"
