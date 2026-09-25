@@ -1,0 +1,23 @@
+name: Push Trigger Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print success message
+        run: echo "Code pushed to main branch successfully."
+
+      - name: Show current date and time
+        run: date
+
+      - name: Show current working directory
+        run: pwd
